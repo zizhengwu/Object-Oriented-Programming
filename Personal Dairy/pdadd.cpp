@@ -14,5 +14,8 @@ int main()
 	Diary diary;
 	diary.add(input);
 	diary.add(ainput);
+	remove("diary.txt");
+	remove("add.txt");
+	rename("diarytemp.txt", "diary.txt");
 	return 0;
 }
