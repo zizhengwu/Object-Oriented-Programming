@@ -20,7 +20,7 @@ public:
 private:
 	vector <long> date;
 	vector <string> content;
-	vector <int> order;
+	vector <int> count;
 };
 
 

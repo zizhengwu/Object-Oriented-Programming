@@ -9,7 +9,6 @@ using namespace std;
 
 int main()
 {
-
 	ifstream input("diary.txt");
 	ifstream ainput("add.txt");
 	Diary diary;

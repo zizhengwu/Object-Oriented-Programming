@@ -11,12 +11,12 @@ using namespace std;
 
 void Diary::add(ifstream & input)
 {
+	date.clear();
+	content.clear();
+	count.clear();
 	ofstream output;
 	bool isInteger(const std::string & s);
 	string line;
-	vector <long> date;
-	vector <string> content;
-	vector <int> count;
 	int temp;
 	temp = -1;
 	while(getline(input, line)){
