@@ -13,6 +13,7 @@ int main()
 	ifstream input("diary.txt");
 	ifstream ainput("add.txt");
 	Diary diary;
-	diary.add(input, ainput);
+	diary.add(input);
+	diary.add(ainput);
 	return 0;
 }

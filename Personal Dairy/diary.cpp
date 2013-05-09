@@ -9,8 +9,9 @@
 
 using namespace std;
 
-void Diary::add(ifstream & input, ifstream & ainput)
+void Diary::add(ifstream & input)
 {
+	ofstream output;
 	bool isInteger(const std::string & s);
 	string line;
 	vector <long> date;
@@ -35,29 +36,7 @@ void Diary::add(ifstream & input, ifstream & ainput)
 		}
 	}
 	count.push_back(temp);
-	temp = -1;
-
-
-	while(getline(ainput, line)){
-		if (isInteger(line)==1)
-		{
-			date.push_back(convertToLong(line));
-			if (temp!=-1)
-			{
-				count.push_back(temp);
-			}
-			temp=0;
-		}
-		else
-		{
-			content.push_back(line);
-			temp = temp + 1;
-		}
-	}
-	count.push_back(temp);
-
-
-	ofstream output("diarytemp.txt");
+	output.open("diarytemp.txt",ios::app);
 	temp=0;
 	for (int i = 0; i < date.size(); ++i)
 	{

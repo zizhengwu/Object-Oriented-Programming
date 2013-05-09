@@ -15,7 +15,7 @@ class Diary
 public:
 	Diary(){};
 	~Diary(){};
-	void add(ifstream & input, ifstream & ainput);
+	void add(ifstream & input);
 
 private:
 	vector <long> date;
