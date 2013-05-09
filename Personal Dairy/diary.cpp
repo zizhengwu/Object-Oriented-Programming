@@ -61,7 +61,7 @@ void Diary::show(long & day,ifstream &input)
 	string line;
 	int temp;
 	temp = 0;
-	output.open("show.txt");
+	output.open("show.txt", ios::app);
 	
 
 	while(getline(input, line)){
@@ -81,7 +81,7 @@ void Diary::show(long & day,ifstream &input)
 
 	if (temp == 0)
 	{
-		output << "NOT FOUND" << endl;
+		output << day << "NOT FOUND" << endl;
 	}
 }
 
