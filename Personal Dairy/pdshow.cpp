@@ -9,10 +9,11 @@ using namespace std;
 
 int main()
 {
+	long day;
 	ifstream input("diary.txt");
-	ifstream ainput("add.txt");
+	ifstream ainput("pdshow.txt");
+	ainput >> day;
 	Diary diary;
-	diary.add(input);
-	diary.add(ainput);
+	diary.show(day,input);
 	return 0;
 }

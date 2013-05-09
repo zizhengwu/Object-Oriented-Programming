@@ -47,6 +47,42 @@ void Diary::add(ifstream & input)
 			temp++;
 		}
 	}
+	output.close();
+}
+
+void Diary::show(long & day,ifstream &input)
+{
+	long getday;
+	date.clear();
+	content.clear();
+	count.clear();
+	ofstream output;
+	bool isInteger(const std::string & s);
+	string line;
+	int temp;
+	temp = 0;
+	output.open("show.txt");
+	
+
+	while(getline(input, line)){
+		if (isInteger(line)==1)
+		{
+			getday = convertToLong(line);
+			if (getday == day)
+			{
+				temp = 1;
+				output << getday << endl;
+				while(getline(input, line)&&isInteger(line)!=1){
+					output << line << endl;
+				}
+			}
+		}
+	}
+
+	if (temp == 0)
+	{
+		output << "NOT FOUND" << endl;
+	}
 }
 
 bool isInteger(const std::string & s)
