@@ -85,6 +85,57 @@ void Diary::show(long & day,ifstream &input)
 	}
 }
 
+int Diary::remove(long & day, ifstream &input)
+{
+	date.clear();
+	content.clear();
+	count.clear();
+	ofstream output;
+	bool isInteger(const std::string & s);
+	string line;
+	int temp;
+	temp = -1;
+	while(getline(input, line)){
+		if (isInteger(line)==1)
+		{
+			date.push_back(convertToLong(line));
+			if (temp!=-1)
+			{
+				count.push_back(temp);
+			}
+			temp = 0;
+		}
+		else
+		{
+			content.push_back(line);
+			temp = temp + 1;
+		}
+	}
+	count.push_back(temp);
+	output.open("diarytemp.txt",ios::app);
+	temp=0;
+	for (int i = 0; i < date.size(); ++i)
+	{
+		if (date[i]==day)
+		{
+			temp += count[i];
+			continue;
+		}
+		else
+		{
+			output << date[i] << endl;
+			for (int i1 = 0; i1 < count[i]; ++i1)
+			{
+				output << content[temp] << endl;
+				temp++;
+			}
+		}
+
+		
+	}
+	output.close();
+}
+
 bool isInteger(const std::string & s)
 {
    if(s.empty() || ((!isdigit(s[0])) && (s[0] != '-') && (s[0] != '+'))) return false ;

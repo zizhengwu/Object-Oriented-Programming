@@ -10,5 +10,9 @@ pdlist: pdlist.cpp diary.cpp
 	g++ -g -c pdlist.cpp
 	g++ -g -c diary.cpp
 	g++ -g -o pdlist $^
+pdremove: pdremove.cpp diary.cpp
+	g++ -g -c pdremove.cpp
+	g++ -g -c diary.cpp
+	g++ -g -o pdremove $^
 c: 
 	rm diarytemp.txt

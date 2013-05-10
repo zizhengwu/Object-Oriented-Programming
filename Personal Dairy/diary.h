@@ -17,7 +17,7 @@ public:
 	~Diary(){};
 	void add(ifstream & input);
 	void show(long & day,ifstream &input);
-
+	int remove(long & day, ifstream &input);
 private:
 	vector <long> date;
 	vector <string> content;
