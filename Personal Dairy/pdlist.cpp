@@ -11,12 +11,12 @@ int main()
 {
 	long startdate;
 	long enddate;
-	ifstream input("diary.txt");
 	ifstream ainput("pdlist.txt");
 	ainput >> startdate >> enddate;
 	Diary diary;
 	for (long i = startdate; i <= enddate; i++)
 	{
+		ifstream input("diary.txt");
 		diary.show(i, input);
 	}
 
