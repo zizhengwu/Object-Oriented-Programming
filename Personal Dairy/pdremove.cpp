@@ -16,7 +16,6 @@ int main()
 	ainput >> day;
 	diary.remove(day, input);
 	remove("diary.txt");
-	remove("remove.txt");
 	rename("diarytemp.txt", "diary.txt");
 	return 0;
 }

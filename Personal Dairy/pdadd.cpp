@@ -20,7 +20,6 @@ int main()
 	while(datetoremove >> date)
 	{
 		ifstream removeduplicate("diary.txt");
-		cout << "duplicate date found " << date << endl;
 		diary.remove(date, removeduplicate);
 		rename("diarytemp.txt", "diary.txt");
 		removeduplicate.close();
@@ -30,7 +29,6 @@ int main()
 	diary.add(input);
 	diary.add(ainput);
 	remove("diary.txt");
-	remove("add.txt");
 	rename("diarytemp.txt", "diary.txt");
 	return 0;
 }
