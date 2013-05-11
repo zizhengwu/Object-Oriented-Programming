@@ -50,7 +50,7 @@ int main()
 		case 4:
 			rename("temp.txt", "pdlist.txt");
 			system("./pdlist");
-			remove("pdlist.txt");
+			// remove("pdlist.txt");
 			rename("show.txt", "result.txt");
 			cout << "Listed in result.txt" << endl;
 			break;
