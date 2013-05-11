@@ -14,6 +14,10 @@ pdremove: pdremove.cpp diary.cpp
 	g++ -g -c pdremove.cpp
 	g++ -g -c diary.cpp
 	g++ -g -o pdremove $^
+main: main.cpp diary.cpp
+	g++ -g -c main.cpp
+	g++ -g -c diary.cpp
+	g++ -g -o main $^
 c: 
 	rm *.o
 	
