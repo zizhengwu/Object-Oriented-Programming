@@ -1,7 +1,5 @@
 # Personal Diary
 
-===
-
 ## 工作流程
 
 每次运行./main时,程序将diary.txt读入内存.同时从INSTRUCTIONS.txt中获取指令.
