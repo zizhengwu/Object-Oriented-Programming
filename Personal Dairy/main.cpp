@@ -69,8 +69,3 @@ int analysis(string & thisline)
 	}
 	return 1;
 }
-
-// pdadd 
-// pdlist [ ]
-// pdshow 
-// pdremove
