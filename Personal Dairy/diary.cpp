@@ -78,11 +78,6 @@ void Diary::show(long & day,ifstream &input)
 			}
 		}
 	}
-
-	if (temp == 0)
-	{
-		output << day << "NOT FOUND" << endl;
-	}
 }
 
 void Diary::remove(long & day, ifstream &input)

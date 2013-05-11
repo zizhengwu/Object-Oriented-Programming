@@ -15,4 +15,5 @@ pdremove: pdremove.cpp diary.cpp
 	g++ -g -c diary.cpp
 	g++ -g -o pdremove $^
 c: 
-	rm diarytemp.txt
+	rm *.o
+	
