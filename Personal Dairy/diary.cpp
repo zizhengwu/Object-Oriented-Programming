@@ -85,7 +85,7 @@ void Diary::show(long & day,ifstream &input)
 	}
 }
 
-int Diary::remove(long & day, ifstream &input)
+void Diary::remove(long & day, ifstream &input)
 {
 	date.clear();
 	content.clear();
@@ -112,7 +112,7 @@ int Diary::remove(long & day, ifstream &input)
 		}
 	}
 	count.push_back(temp);
-	output.open("diarytemp.txt",ios::app);
+	output.open("diarytemp.txt");
 	temp=0;
 	for (int i = 0; i < date.size(); ++i)
 	{
@@ -135,6 +135,23 @@ int Diary::remove(long & day, ifstream &input)
 	}
 	output.close();
 }
+
+void Diary::getdate(ifstream & input)
+{
+	date.clear();
+	content.clear();
+	count.clear();
+	ofstream output;
+	bool isInteger(const std::string & s);
+	string line;
+	output.open("getdate.txt");
+	while(getline(input, line)){
+		if(isInteger(line)==1)
+			output << convertToLong(line) << endl;
+	}
+	output.close();
+}
+
 
 bool isInteger(const std::string & s)
 {

@@ -9,9 +9,23 @@ using namespace std;
 
 int main()
 {
-	ifstream input("diary.txt");
+	long date;
 	ifstream ainput("add.txt");
+	ifstream getdate("add.txt");
 	Diary diary;
+	diary.getdate(getdate);
+	getdate.close();
+	// get date in add.txt to remove form diary.txt
+	ifstream datetoremove("getdate.txt");
+	while(datetoremove >> date)
+	{
+		ifstream removeduplicate("diary.txt");
+		cout << date;
+		diary.remove(date, removeduplicate);
+		rename("diarytemp.txt", "diary.txt");
+		removeduplicate.close();
+	}
+	ifstream input("diary.txt");
 	diary.add(input);
 	diary.add(ainput);
 	remove("diary.txt");
