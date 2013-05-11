@@ -18,6 +18,6 @@ main: main.cpp diary.cpp
 	g++ -g -c main.cpp
 	g++ -g -c diary.cpp
 	g++ -g -o main $^
-c: 
+clean: 
 	rm *.o
 	

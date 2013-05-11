@@ -15,6 +15,6 @@ inline long convertToLong(std::string const& s)
   std::istringstream i(s);
   long x;
   if (!(i >> x))
-    throw BadConversion("convertToDouble(\"" + s + "\")");
+    throw BadConversion("convertToLong(\"" + s + "\")");
   return x;
 }
