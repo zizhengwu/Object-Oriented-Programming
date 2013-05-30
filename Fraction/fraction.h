@@ -14,6 +14,8 @@ public:
 	~Fraction(void){};
 	inline int GetNumerator(){return num;}
 	inline int GetDenominator(){return den;}
+	inline void SetDenominator(int i){den = i;}
+	inline void SetNumerator(int i){num = i;}
 };
 
 ostream& operator << (ostream& os, Fraction& fraction);

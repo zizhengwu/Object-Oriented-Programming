@@ -2,10 +2,12 @@
 #include <iostream>
 int main()
 {
-	Fraction *frac1 = new Fraction();
+	Fraction frac1;
 	cout << "Enter a fraction";
-	cin >> *frac1;
-	Fraction frac2;
-	cout << "Enter a fraction";
-	cin >> frac2;
+	cin >> frac1;
+	cout << frac1 << endl;
+	// Fraction frac2;
+	// cout << "Enter a fraction";
+	// cin >> frac2;
+	// cout << frac2;
 }

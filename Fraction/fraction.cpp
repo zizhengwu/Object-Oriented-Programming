@@ -15,9 +15,9 @@ Fraction::Fraction(int numerator, int denominator){
 }
 
 ostream& operator << (ostream& os, Fraction& fraction){
-	os << fraction.GetDenominator();
-	os << "/";
 	os << fraction.GetNumerator();
+	os << "/";
+	os << fraction.GetDenominator();
 	return os;
 }
 
@@ -30,6 +30,7 @@ istream& operator >> (istream& is, Fraction& fraction){
 	numerator = convertToInt(line.substr(0, line.find(delimiter)));
 	line.erase(0, line.find(delimiter) + delimiter.length());
 	denominator = convertToInt(line.substr(0, line.find(delimiter)));
-	Fraction(numerator, denominator);
+	fraction.SetDenominator(denominator);
+	fraction.SetNumerator(numerator);	
 	return is;
 }
