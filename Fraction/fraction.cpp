@@ -34,3 +34,8 @@ istream& operator >> (istream& is, Fraction& fraction){
 	fraction.SetNumerator(numerator);	
 	return is;
 }
+
+void Fraction::normalize()
+{
+	
+}
