@@ -37,5 +37,12 @@ istream& operator >> (istream& is, Fraction& fraction){
 
 void Fraction::normalize()
 {
-	
+	for (int i = 2; i < num; ++i)
+	{
+		while(num % i == 0 && den % i ==0)
+		{
+			num /= i;
+			den /= i;
+		}
+	}
 }
