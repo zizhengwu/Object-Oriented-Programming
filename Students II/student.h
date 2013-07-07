@@ -14,7 +14,13 @@ class Student
 public:
 	Student(){};
 	~Student(){};
+	inline Student (int tempno, string tempname, vector <Course> tempcourse){
+		no = tempno;
+		name = tempname;
+		course = tempcourse;
+	}
 private:
+	friend class Stl;
 	int no;
 	string name;
 	vector <Course> course;

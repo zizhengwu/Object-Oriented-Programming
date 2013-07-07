@@ -13,7 +13,12 @@ class Course
 public:
 	Course(){};
 	~Course(){};
+	inline Course(string name, int score){
+		coursename = name;
+		coursescore = score;
+	}
 private:
+	friend class Stl;
 	string coursename;
 	int coursescore;
 };

@@ -10,5 +10,9 @@ int main()
 	Stl hack;
 	ifstream input("input.txt");
 	hack.getinput(input);
+	hack.analyse();
+	hack.optimizestudent();
+	hack.printstudent();
+	hack.printcourse();
 	return 0;
 }

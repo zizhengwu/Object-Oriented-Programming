@@ -62,6 +62,16 @@ int main()
 		bool frac (frac1 > frac2);
 		cout << frac << endl;
 	}
+	{
+		cout << "to string" << endl;
+		cout << string(frac1) << endl;
+		cout << string(frac2) << endl;
+	}
+	{
+		cout << "to double" << endl;
+		cout << double(frac1) << endl;
+		cout << double(frac2) << endl;
+	}
 }
 
 

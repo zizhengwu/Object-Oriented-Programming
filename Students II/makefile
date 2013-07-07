@@ -1,6 +1,6 @@
-main: main.cpp fraction.cpp
-	g++ -g -c fraction.cpp
+main: main.cpp stl.cpp
 	g++ -g -c main.cpp
+	g++ -g -c stl.cpp
 	g++ -g -o main $^
 	
 clean:
